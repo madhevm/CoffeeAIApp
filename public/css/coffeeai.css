@@ -7,12 +7,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  display: flex;
-  font-size: 16px;
+#__next {
+  /* */
 }
 
 h1 {
@@ -24,23 +20,27 @@ h1 {
 }
 
 .side-bar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
   background-color: #353935;
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
   align-items: center;
   text-align: left;
   justify-content: flex-end;
-  min-height: 100vh;
-  width: 100%;
+  max-height: 100vh;
+  width: 100vh;
 }
 
 .bottom-section {

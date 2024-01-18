@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
-function CoffeeAI() {
+function Coffee() {
   return(
 <>
     <Head>
@@ -92,16 +92,16 @@ function CoffeeAI() {
     </p>
   </section>
 
-<Script src="/js/vendor/jquery-3.1.0.js"></Script>
-<Script src="/js/app_page.js"></Script>
-<Script src="/js/vendor/aws-cognito-sdk.min.js"></Script>
-<Script src="/js/vendor/amazon-cognito-identity.min.js"></Script>
-<Script src="/js/config.js"></Script>
-<Script src="/js/cognito-auth.js"></Script>
+<Script src="js/vendor/jquery-3.1.0.js"></Script>
+<Script src="js/app_page.js"></Script>
+<Script src="js/vendor/aws-cognito-sdk.min.js"></Script>
+<Script src="js/vendor/amazon-cognito-identity.min.js"></Script>
+<Script src="js/config.js"></Script>
+<Script src="js/cognito-auth.js"></Script>
 
 </>
 
   )
 
 }
-export default CoffeeAI
+export default Coffee
