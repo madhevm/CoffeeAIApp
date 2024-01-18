@@ -58,7 +58,7 @@ function Home() {
       <div className="home__container container grid">
         <div className="home__data">
           <span className="home__data-subtitle">
-            Generating the perfect coffee based on your preferences
+            Generating the perfect coffee recipes based on your preferences
           </span>
           <h1 className="home__data-title">
             Your Coffee, Your Rules
