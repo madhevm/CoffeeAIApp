@@ -98,7 +98,10 @@ function CoffeeAI() {
 <Script src="/js/vendor/amazon-cognito-identity.min.js"></Script>
 <Script src="/js/config.js"></Script>
 <Script src="/js/cognito-auth.js"></Script>
+
 </>
+
   )
+
 }
 export default CoffeeAI

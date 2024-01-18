@@ -4,7 +4,7 @@ import Script from 'next/script'
 
 function Home() {
   return(
-    <>
+<>
     <Head>
 
   <meta charSet="UTF-8" />
