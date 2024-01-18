@@ -119,7 +119,7 @@ var CoffeeAI = window.CoffeeAI || {};
         signin(email, password,
             function signinSuccess() {
                 console.log('Successfully Logged In');
-                window.location.href = 'coffeeai.html';
+                window.location.href = '/coffeeai';
             },
             function signinError(err) {
                 alert(err);
