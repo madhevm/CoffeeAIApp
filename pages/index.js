@@ -5,7 +5,6 @@ import Script from 'next/script'
 if (typeof window === 'object') {
   // Check if document is finally loaded
      document.addEventListener("DOMContentLoaded", function () {
-         alert('Finished loading')
        });
     }
 
