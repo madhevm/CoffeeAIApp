@@ -1,7 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import {router} from "next/client";
+import Document, {Html, Head, Main, NextScript } from 'next/document'
 
+if (typeof window === 'object') {
+  // Check if document is finally loaded
+     document.addEventListener("DOMContentLoaded", function () {
+         alert('Finished loading')
+       });
+    }
+    
 function Home() {
   return(
 <>

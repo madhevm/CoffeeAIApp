@@ -3,6 +3,7 @@ login.js
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import {router} from "next/client";
 
 function Login() {
   return(
