@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
-import {router} from "next/client";
-import Document, {Html, Head, Main, NextScript } from 'next/document'
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
@@ -10,7 +8,7 @@ if (typeof window === 'object') {
          alert('Finished loading')
        });
     }
-    
+
 function Home() {
   return(
 <>

@@ -1,9 +1,13 @@
-login.js
-
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
-import {router} from "next/client";
+
+if (typeof window === 'object') {
+  // Check if document is finally loaded
+     document.addEventListener("DOMContentLoaded", function () {
+         alert('Finished loading')
+       });
+    }
 
 function Login() {
   return(
