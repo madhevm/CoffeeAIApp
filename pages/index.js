@@ -35,7 +35,7 @@ function Home() {
             </a>
           </li>
           <li className="nav__item">
-            <a href="login.html" className="nav__link">
+            <a href="/login" className="nav__link">
               Login
             </a>
           </li>
@@ -65,7 +65,7 @@ function Home() {
             <br />
             <b>Artificially Crafted</b>
           </h1>
-          <a href="/coffeeai.html" className="button">
+          <a href="/login" className="button">
             Find Your Coffee Now!
           </a>
         </div>

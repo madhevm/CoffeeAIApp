@@ -1,7 +1,7 @@
 var CoffeeAI = window.CoffeeAI || {}; 
 
 (function scopeWrapper($) {
-    var signinUrl = 'login.html';
+    var signinUrl = '/login';
 
     var poolData = {
         UserPoolId: window._config.cognito.userPoolId,
