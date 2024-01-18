@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: flex;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Excon', sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+  padding: 20px 0;
+  color: #ccc;
+}
+
+.side-bar {
+  background-color: #353935;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: flex-end;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  color: #bababa;
+  font-size: 11px;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+}
+
+.input-container {
+  position: absolute;
+  width: 100%;
+  max-width: 650px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.input-container #submit {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+button {
+  border: solid 0.7px #fff;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 1px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+nav {
+  border-top: solid 0.5px rgba(255, 255, 255, 0.5);
+  color: #bbb;
+  padding: 8px;
+  margin: 8px;
+}
+
+.history {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #fff;
+}
+
+.history p {
+  cursor: pointer;
+}
+
+.forms-wrap {
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+form {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 10;
+  height: 50%;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.input-wrap {
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+  margin-left: 6%;
+}
+
+.input-field {
+  position: absolute;
+  margin-left: 0px;
+  width: 89%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 0.5px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+}
+
+.toggle:hover {
+  color: #8371fd;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 450;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  transition: 0.3s;
+  padding: 9 25;
+}
+
+.button:hover {
+  color: #8371fd;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.input-field.active {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.input-field.active + label {
+  font-size: .75rem;
+  top: -2px;
+}
+
+.info {
+  position: sticky;
+  bottom: 0;
+}
+
+.sign-btn {
+  width: 85%;
+  height: 38px;
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.sign-btn:hover {
+  background-color: #8371fd;
+}
+
+.logo {
+  align-items: center;
+  margin-left: 30%;
+}
+
+.logo img {
+  width: 104px;
+  margin: 0.3rem;
+}
+
+.text {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.text a {
+  color: #bbb;
+  transition: 0.3s;
+}
+
+output-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.formatted-response {
+  font-family: 'Poppins', sans-serif;
+  border: 1px transparent #ccc;
+  /* Light grey border for the response box */
+  padding: 10px;
+  /* Padding inside the response box */
+  margin-top: 10px;
+  /* Add margin for separation */
+  text-align: left;
+  /* Align text to the left */
+  background-color: #f9f9f9;
+  /* Light grey background for the response box */
+  font-size: 0.95rem;
+  color: #151111;
+}
+
+.formatted-response h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  /* Text color for the subheading */
+  background-color: #555;
+  /* Dark grey background for the subheading */
+  padding: 5px;
+  /* Add padding for the subheading */
+  margin-bottom: 10px;
+  /* Spacing below the subheading */
+}
+
+.loading-message {
+  color: #fff;
+  /* Dark grey text color for the loading message */
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+@media all and (max-width: 800px) {
+  .side-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .input-container {
+    max-width: 100%;
+  }
+
+  .sign-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .input-field {
+    width: 80%;
+  }
+
+  .button {
+    font-size: 0.7rem;
+    padding: 8px;
+    margin: 8px;
+  }
+
+  .info {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .logo {
+    margin-left: 20%;
+  }
+}
