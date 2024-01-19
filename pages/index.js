@@ -86,8 +86,8 @@ function Home() {
               <img src="/images/open-ai.svg" alt="" />
             </h2>
             <span className="experience__description">
-              Aroma <br /> Insights by <br />
-              OpenAI
+              Aroma <br /> Insights <br />
+              by OpenAI
             </span>
           </div>
           <div className="experience__data">
@@ -100,10 +100,10 @@ function Home() {
           </div>
           <div className="experience__data">
             <h2 className="experience__number">
-              <img src="/images/elasticbeanstalk.svg" alt="" />
+              <img src="/images/amplify.svg" alt="" />
             </h2>
             <span className="experience__description">
-              Elastic Beakstalk <br />
+              Amplify <br />
               magical brewing <br /> wizard
             </span>
           </div>
@@ -122,14 +122,14 @@ function Home() {
           </p>
           <div>
             <a
-              href="https://www.gmail.com/"
+              href="madhevmenon@gmail.com"
               target="_blank"
               className="footer__social"
             >
               <i className="ri-mail-fill" />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="http://linkedin.com/in/madhev-menon/"
               target="_blank"
               className="footer__social"
             >

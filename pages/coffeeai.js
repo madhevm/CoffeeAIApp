@@ -100,7 +100,7 @@ function CoffeeAI() {
     </p>
   </section>
 
-  <Script src="js/app.js"></Script>
+  <Script src="js/app_page.js"></Script>
   <Script src="js/config.js"></Script>
 </>
   )

@@ -168,4 +168,4 @@ var CoffeeAI = window.CoffeeAI || {};
             }
         );
     }
-}(jQuery));
+});
