@@ -166,8 +166,6 @@ function Login() {
   </div>
 </main>
 
-<Script src="/js/cognito-auth.js"></Script>
-<Script src="/js/config.js"></Script>
 <Script src="/js/login_page.js"></Script>
 </>
   )

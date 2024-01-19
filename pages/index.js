@@ -159,24 +159,21 @@ function Home() {
               <a
                 href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjyhOr69t2DAxXFGa0GHWF8A4MYABAAGgJwdg&ae=2&gclid=CjwKCAiAqY6tBhAtEiwAHeRopYP4ANRg_aVCC736P4gQ-zoIQQF_l6V8S929vlZTXLnm-FguQreGwBoC_BwQAvD_BwE&ohost=www.google.com&cid=CAESVeD2fx9fu4KT5b8hvJvhv9Br5xUf0HBivUPN0ANV_5VEEPJA9iTI5om3KJS-i5YG4W-wEH6O1V2EettIurEENuEcoonUNobXplieaIYZ7XuY81Niw1E&sig=AOD64_1-tC-TVHaK-phUHQqJyYiBkpQ2Xg&q&adurl&ved=2ahUKEwiZg-T69t2DAxXIMjQIHRYqA68Q0Qx6BAgFEAE&nis=8&dct=1"
                 className="footer__link"
-              >
-                Lambda
+              >Lambda
               </a>
             </li>
             <li className="footer__item">
               <a
                 href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiQ6Zjx9t2DAxUyMq0GHdnjCG8YABAAGgJwdg&ae=2&gclid=CjwKCAiAqY6tBhAtEiwAHeRopUlJipjvvZPeXZ2XysFHrKb5bUMz7TLjw42PlCVcFYlVBmTMTxRxvBoC7MYQAvD_BwE&ohost=www.google.com&cid=CAESVeD2RIe2usZ0Cybj_lz0ADIVi3WRBfTettGNqxWV_d1bauh44afvfmxY2GEJV-CEAym-03PvrpqfEhBHknZlFa2-xoJqlnGb8_vrIkLN2RD6NdcFs0g&sig=AOD64_1eJJhY8wRiHU7zK7jru-C2RLlKlg&q&adurl&ved=2ahUKEwidj5Tx9t2DAxV2MDQIHdIEBBsQ0Qx6BAgIEAE&nis=8&dct=1"
                 className="footer__link"
-              >
-                Cognito
+              >Cognito
               </a>
             </li>
             <li className="footer__item">
               <a
-                href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi97JWC992DAxWOFa0GHT1IDBgYABAAGgJwdg&ae=2&gclid=CjwKCAiAqY6tBhAtEiwAHeRopfftsNnFPxB01cHUVNnSFuJ8vr13BWdS-YHqOOCJTYbmfnuiyryiKhoCVxkQAvD_BwE&ohost=www.google.com&cid=CAESVeD27zH6SfdndDpVKIrSn8PfUujUr2DAB43HeyV3jZnMWrw2EZa3lnCwdO4mZOYFP5W2ofKIK3R_ulc4ql3XG_8Lbv38nZwx8umnTLmOjkpg9Q20NzQ&sig=AOD64_1Wk6QQyvmj4yzlkp5udQI3xo-3Ow&q&adurl&ved=2ahUKEwiUrpCC992DAxWrLTQIHdZACjcQ0Qx6BAgFEAE&nis=8&dct=1"
+                href="https://aws.amazon.com/amplify/"
                 className="footer__link"
-              >
-                Elastic Beanstalk
+              >Amplify
               </a>
             </li>
           </ul>

@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import Status from "../public/js/Status";
+import { Account } from "../public/js/Account"
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
@@ -11,7 +13,10 @@ if (typeof window === 'object') {
 function CoffeeAI() {
   return(
 <>
-    <Head>
+<Account>
+<Status />
+</Account>
+<Head>
 
   <meta charSet="UTF-8" />
   <title>Coffee AI</title>
@@ -101,7 +106,6 @@ function CoffeeAI() {
   </section>
 
   <Script src="js/app_page.js"></Script>
-  <Script src="js/config.js"></Script>
 </>
   )
 }

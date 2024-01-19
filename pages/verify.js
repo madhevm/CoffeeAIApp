@@ -88,7 +88,6 @@ function Verify() {
   </div>
 </main>
 <Script src="/js/verify_page.js"></Script>
-<Script src="/js/config.js"></Script>
 </>
   )
 }
