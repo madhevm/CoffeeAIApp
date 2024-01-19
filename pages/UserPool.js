@@ -1,3 +1,4 @@
+import React from 'react';
 import { CognitoUserPool } from "amazon-cognito-identity-js";
 
 const poolData = {
