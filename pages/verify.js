@@ -13,7 +13,7 @@ if (typeof window === 'object') {
        });
     }
     
-function Verify() {
+function UserVerification() {
   return(
 <>
 <Head>
@@ -54,4 +54,4 @@ function Verify() {
   )
 }
 
-export default Verify
+export default UserVerification
