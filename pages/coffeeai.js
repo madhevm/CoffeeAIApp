@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
 import Status from "../public/js/Status";
 import { Account } from "../public/js/Account"
 import "../public/css/coffeeai.css";
+import { useRouter } from 'next/router';
+import main from "../public/css/coffeeai.css";
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
@@ -12,11 +14,19 @@ if (typeof window === 'object') {
     }
 
 function CoffeeAI() {
+  const router = useRouter();
+  const [accountStatus, setAccountStatus] = useState('');
+  useEffect(() => {
+    // Fetch or set the account status, for example, from an API or another source
+    const fetchedAccountStatus = 'Please Login'; // Replace this with your actual logic
+    setAccountStatus(fetchedAccountStatus);
+
+    // Check if the user is not logged in, then redirect to the login page
+    if (fetchedAccountStatus === 'Please Login') {
+    }
+  }, []);
   return(
 <>
-<Account>
-<Status />
-</Account>
 <Head>
 
   <meta charSet="UTF-8" />
@@ -103,6 +113,9 @@ function CoffeeAI() {
       Powered with ChatGPT by OpenAI. Chat GPT Mar 14 Version. CoffeeAI can make
       mistakes. Consider checking important information and a variety of sources
       before brewing!
+      <Account>
+        <Status />
+      </Account>
     </p>
   </section>
 
