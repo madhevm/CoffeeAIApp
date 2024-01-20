@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import UserPool from './UserPool';
 import '../css/login.css';
 
 const Signup = () => {
+  const router = useRouter();
   const [emailInputRegister, setEmail] = useState("");
   const [passwordInputRegister, setPassword] = useState("");
 
-  const onSubmit = (event) => {
-    event.preventDefault();
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+  
     UserPool.signUp(emailInputRegister, passwordInputRegister, [], null, (err, data) => {
       if (err) {
         console.error(err);
-      }
+      } else {
       console.log(data);
+      router.push('/verify');
+      }
     });
   };
+
 return (
-        <form onSubmit={onSubmit}
+        <form onSubmit={onSubmit} 
           autoComplete="off"
           className="sign-up-form"
           id="registrationForm"
@@ -64,7 +70,7 @@ return (
             </div>
             <input type="submit" defaultValue="Sign Up" className="sign-btn" />
             <p className="text">
-              By signing up, I agree to <a href="#">Brew the Best Coffee</a> and
+              By signing up, I agree to <a href="/">Brew the Best Coffee</a> and
               share it with others!
             </p>
           </div>

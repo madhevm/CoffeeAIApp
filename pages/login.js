@@ -7,6 +7,7 @@ import Signup from '../public/js/Signup';
 import moveSlider from '../public/js/login_page';
 import toggle from '../public/js/login_page';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Link from 'next/link';
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
