@@ -34,7 +34,7 @@ function UserVerification() {
     <div className="inner-box">
       <div className="forms-wrap">
       <Account>
-          <VerifyUser />
+          <Verify />
       </Account> 
       </div>
       <div className="carousel">
