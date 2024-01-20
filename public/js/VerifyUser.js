@@ -40,24 +40,35 @@ function Verify() {
   };
  
   return (
-    <div>
-        (<form onSubmit={verifyAccount}>
-          Enter email:
+        <form onSubmit={verifyAccount}
+        action="/coffeeai"
+        autoComplete="off"
+        className="sign-up-form"
+        id="signupForm">
           <input
             value={emailInputSignin}
             onChange={(e) => setEmail(e.target.value)}
             type="text"
+            pattern=".*"
+            minLength={4}
+            className="input-field"
+            autoComplete="off"
+            required=""
           />
-          Enter the OTP:
+          <label>eMail</label>
           <input
             value={OTP}
             onChange={(e) => setOTP(e.target.value)}
             type="text"
+            pattern=".*"
+            minLength={4}
+            className="input-field"
+            autoComplete="off"
+            required=""
           />
-          <input type="submit" defaultValue="Verify" className="sign-btn" />
+          <label>OTP</label>
+          <input type="submit" defaultValue="Verify" className="verify-btn" />
         </form>
-        );
-    </div>
   );
 }
  

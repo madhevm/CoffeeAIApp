@@ -3,9 +3,9 @@ import Head from 'next/head'
 import Script from 'next/script'
 import { Account } from "../public/js/Account"
 import Verify from "../public/js/VerifyUser"
-import Signup from '../public/js/Signup';
 import moveSlider from '../public/js/verify_page';
 import toggle from '../public/js/verify_page';
+import "../public/css/verify.css";
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
@@ -27,6 +27,7 @@ function UserVerification() {
     rel="stylesheet"
   />
   <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
+
 </Head>
 
 <main>
@@ -49,7 +50,7 @@ function UserVerification() {
       </div>  
   </div>
 </main>
-<Script src="/js/verify_page.js"></Script>
+<Script src="../public/js/verify_page.js"></Script>
 </>
   )
 }

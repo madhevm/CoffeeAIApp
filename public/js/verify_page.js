@@ -1,3 +1,5 @@
+if (typeof document === 'undefined') {
+} else {
 const inputs = document.querySelectorAll(".input-field");
 const toggle_btn = document.querySelectorAll(".toggle");
 const main = document.querySelector("main");
@@ -37,3 +39,4 @@ function moveSlider() {
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
+}
