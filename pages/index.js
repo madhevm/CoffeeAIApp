@@ -67,9 +67,9 @@ function Home() {
             Generating the perfect coffee recipes based on your preferences
           </span>
           <h1 className="home__data-title">
-            Your Coffee, Your Rules
+            Your Coffee,
             <br />
-            <b>Artificially Crafted</b>
+            <b>Your Rules</b>
           </h1>
           <a href="/login" className="button">
             Find Your Coffee Now!
