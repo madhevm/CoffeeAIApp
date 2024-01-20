@@ -1,11 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+import { useRouter } from 'next/router';
 import UserPool from './UserPool';
 import { AccountContext } from "./Account";
 import '../css/login.css';
 
 const Login = () => {
 
+  const router = useRouter();
   const [emailInputSignin, setEmail] = useState("");
   const [passwordInputSignin, setPassword] = useState("");
 
@@ -35,6 +37,7 @@ const Login = () => {
     user.authenticateUser(authDetails, {
       onSuccess: (data) => {
         console.log("onSuccess: ", data);
+        router.push('/coffeeai');
       },
       onFailure: (err) => {
         console.error("onFailure: ", err);

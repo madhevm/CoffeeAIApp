@@ -1,8 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
-import Script from 'next/script'
-import { Account } from "../public/js/Account"
-import Verify from "../public/js/VerifyUser"
+import React from 'react';
+import Head from 'next/head';
+import Script from 'next/script';
+import { Account } from "../public/js/Account";
+import Verify from "../public/js/VerifyUser";
 import moveSlider from '../public/js/verify_page';
 import toggle from '../public/js/verify_page';
 import "../public/css/verify.css";
@@ -31,11 +31,12 @@ function UserVerification() {
 </Head>
 
 <main>
+
   <div className="box">
     <div className="inner-box">
       <div className="forms-wrap">
       <Account>
-          <Verify />
+        <Verify />
       </Account> 
       </div>
       <div className="carousel">
@@ -45,12 +46,14 @@ function UserVerification() {
             className="image img-1 show"
             alt=""
           />
-          </div>
         </div>
-      </div>  
+      </div>
+    </div>  
   </div>
 </main>
-<Script src="../public/js/verify_page.js"></Script>
+
+<Script src="/js/verify_page.js"></Script>
+
 </>
   )
 }
