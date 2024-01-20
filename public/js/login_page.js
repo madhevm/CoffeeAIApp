@@ -1,8 +1,11 @@
-const inputs = document.querySelectorAll(".input-field");
-const toggle_btn = document.querySelectorAll(".toggle");
-const main = document.querySelector("main");
-const bullets = document.querySelectorAll(".bullets span");
-const images = document.querySelectorAll(".image");
+if (typeof document === 'undefined') {
+} else {
+  const inputs = document.querySelectorAll(".input-field");
+  const toggle_btn = document.querySelectorAll(".toggle"); 
+  const main = document.querySelector("main");
+  const bullets = document.querySelectorAll(".bullets span");
+  const images = document.querySelectorAll(".image");
+
 
 inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
@@ -19,6 +22,7 @@ toggle_btn.forEach((btn) => {
     main.classList.toggle("sign-up-mode");
   });
 });
+
 
 function moveSlider() {
   let index = this.dataset.value;
@@ -37,4 +41,4 @@ function moveSlider() {
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
-
+}

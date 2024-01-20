@@ -1,6 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import { Account } from "../public/js/Account"
+import Login from "../public/js/Login"
+import Signup from '../public/js/Signup';
+import moveSlider from '../public/js/login_page';
+import toggle from '../public/js/login_page';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
@@ -8,8 +14,9 @@ if (typeof window === 'object') {
        });
     }
 
-function Login() {
+function Signin() {
   return(
+
 <>
 <Head>
 
@@ -27,126 +34,23 @@ function Login() {
 </Head>
 
 <main>
+
   <div className="box">
     <div className="inner-box">
       <div className="forms-wrap">
-        <form
-          action="/coffeeai"
-          autoComplete="off"
-          className="sign-in-form"
-          id="signinForm"
-        >
-          <div className="logo">
-            <img src="/images/image2_man_icon.png" alt="coffeeai" />
-            <h4>coffee.ai</h4>
-          </div>
-          <div className="heading">
-            <h2>Welcome Back!</h2>
-            <h6>Not registered yet? </h6>
-            <a href="#" className="toggle">
-               Sign up
-            </a>
-          </div>
-          <div className="actual-form">
-            <div className="input-wrap">
-              <input
-                type="email"
-                id="emailInputSignin"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>e-mail</label>
-            </div>
-            <div className="input-wrap">
-              <input
-                type="password"
-                id="passwordInputSignin"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>Password</label>
-            </div>
-            <input type="submit" defaultValue="Sign in" className="sign-btn" />
-            <p className="text">
-              Forgotten your password or your login details?
-              <a href="#">Get help</a> signing in
-            </p>
-          </div>
-        </form>
-        <form
-          action="/login"
-          autoComplete="off"
-          className="sign-up-form"
-          id="registrationForm"
-        >
-          <div className="logo">
-            <img src="/images/image2_man_icon.png" alt="coffeeai" />
-            <h4>coffee.ai</h4>
-          </div>
-          <div className="heading">
-            <h2>Get Started</h2>
-            <h6>Already registed your account? </h6>
-            <a href="#" className="toggle">
-              Sign in
-            </a>
-          </div>
-          <div className="actual-form">
-            <div className="input-wrap">
-              <input
-                type="email"
-                id="emailInputRegister"
-                pattern=".*"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>eMail</label>
-            </div>
-            <div className="input-wrap">
-              <input
-                type="password"
-                id="passwordInputRegister"
-                pattern=".*"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>Password</label>
-            </div>
-            <div className="input-wrap">
-              <input
-                type="password"
-                id="password2InputRegister"
-                pattern=".*"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>Confirm Password</label>
-            </div>
-            <input type="submit" defaultValue="Sign Up" className="sign-btn" />
-            <p className="text">
-              By signing up, I agree to <a href="#">Brew the Best Coffee</a> and
-              share it with others!
-            </p>
-          </div>
-        </form>
+        <Account>
+          <Login />
+          <Signup />
+        </Account> 
       </div>
       <div className="carousel">
         <div className="images-wrapper">
           <img
-            src="/images/carousel_1.png"
+            src="/images/carousel_2.png"
             className="image img-1 show"
             alt=""
           />
-          <img src="/images/carousel_2.png" className="image img-2" alt="" />
+          <img src="/images/carousel_1.png" className="image img-2" alt="" />
           <img src="/images/carousel_3.png" className="image img-3" alt="" />
         </div>
         <div className="text-wrap">
@@ -166,8 +70,8 @@ function Login() {
   </div>
 </main>
 
-<Script src="/js/login_page.js"></Script>
+<Script src="../public/js/login_page.js"></Script>
 </>
   )
 }
-export default Login
+export default Signin

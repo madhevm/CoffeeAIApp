@@ -1,6 +1,7 @@
 import { CognitoUser, CognitoUserAttribute } from 'amazon-cognito-identity-js';
 import { useState } from 'react';
 import UserPool from './UserPool';
+import '../css/verify.css'
  
 function Verify() {
   const [emailInputSignin, setEmail] = useState('');

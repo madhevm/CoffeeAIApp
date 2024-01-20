@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UserPool from './UserPool';
+import '../css/login.css';
 
 const Signup = () => {
   const [emailInputRegister, setEmail] = useState("");
@@ -16,9 +17,7 @@ const Signup = () => {
     });
   };
 return (
-  <div>
         <form onSubmit={onSubmit}
-          action="/login"
           autoComplete="off"
           className="sign-up-form"
           id="registrationForm"
@@ -70,7 +69,6 @@ return (
             </p>
           </div>
         </form>
-  </div>
 );
 };
 export default Signup;

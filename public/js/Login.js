@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
 import UserPool from './UserPool';
 import { AccountContext } from "./Account";
+import '../css/login.css';
 
 const Login = () => {
 
@@ -44,7 +45,6 @@ const Login = () => {
     });
   };
 return (
-  <div>
           <form onSubmit={onSubmit}
           action="/coffeeai"
           autoComplete="off"
@@ -96,7 +96,6 @@ return (
             </p>
           </div>
         </form>
-  </div>
 );
 };
 export default Login;

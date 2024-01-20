@@ -1,6 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import { Account } from "../public/js/Account"
+import Verify from "../public/js/Verify"
+import Signup from '../public/js/Signup';
+import moveSlider from '../public/js/verify_page';
+import toggle from '../public/js/verify_page';
 
 if (typeof window === 'object') {
   // Check if document is finally loaded
@@ -28,52 +33,9 @@ function Verify() {
   <div className="box">
     <div className="inner-box">
       <div className="forms-wrap">
-        <form
-          action="/verify"
-          autoComplete="off"
-          className="verify-form"
-          id="verifyForm"
-        >
-          <div className="logo">
-            <img src="/images/image2_man_icon.png" alt="coffeeai" />
-            <h4>coffee.ai</h4>
-          </div>
-          <div className="heading">
-            <h2>Verification</h2>
-            <h6>Verify yourself before you brew!</h6>
-          </div>
-          <div className="actual-form">
-            <div className="input-wrap">
-              <input
-                type="eMail"
-                id="emailInputVerify"
-                pattern=".*"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>eMail</label>
-            </div>
-            <div className="input-wrap">
-              <input
-                type="text"
-                id="codeInputVerify"
-                pattern=".*"
-                minLength={4}
-                className="input-field"
-                autoComplete="off"
-                required=""
-              />
-              <label>Verification Code</label>
-            </div>
-            <input type="submit" defaultValue="Verify" className="verify-btn" />
-            <p className="text">
-              Didn't get a verification code? Check your spam mail or try again
-              by <a href="/login">registering your account</a> with us.
-            </p>
-          </div>
-        </form>
+      <Account>
+          <Verify />
+      </Account> 
       </div>
       <div className="carousel">
         <div className="images-wrapper">
