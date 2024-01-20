@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import { Account } from "../public/js/Account"
-import Verify from "../public/js/Verify"
+import Verify from "../public/js/VerifyUser"
 import Signup from '../public/js/Signup';
 import moveSlider from '../public/js/verify_page';
 import toggle from '../public/js/verify_page';
@@ -34,7 +34,7 @@ function Verify() {
     <div className="inner-box">
       <div className="forms-wrap">
       <Account>
-          <Verify />
+          <VerifyUser />
       </Account> 
       </div>
       <div className="carousel">
