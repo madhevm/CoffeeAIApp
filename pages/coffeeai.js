@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import Status from "../public/js/Status";
 import { Account } from "../public/js/Account"
+import "../public/css/coffeeai.css";
 
 if (typeof window === 'object') {
   // Check if document is finally loaded

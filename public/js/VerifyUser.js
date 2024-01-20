@@ -52,9 +52,9 @@ function Verify() {
         <h4>coffee.ai</h4>
       </div>
       <div className="heading">
-        <h2>Get Started</h2>
-          <h6>Already registed your account? </h6>
-          <a href="#" className="toggle">
+        <h2>Verification</h2>
+          <h6>Verify yourself before you brew! Do you already have an account? </h6>
+          <a href="/login" className="toggle">
               Sign in
           </a>
       </div>
@@ -83,10 +83,13 @@ function Verify() {
             autoComplete="off"
             required=""
           ></input>
-          <label>OTP</label>
+          <label>Verification Code</label>
         </div>
           {verificationStatus && <p className={verificationStatus.includes('successfully') ? 'success' : 'error'}>{verificationStatus}</p>}
           <input type="submit" defaultValue="Verify" className="verify-btn" />
+          <p class="text">
+                Didn't get a verification code? Check your spam mail or try again by <a href="/login.html">registering your account</a> with us.
+          </p>
     </div>
   </form>
 );
