@@ -17,13 +17,13 @@ const Status = () => {
   }, []);
 
   const handleLoginRedirect = () => {
-    router.push('/login');
+    router.push('/login').then(() => router.reload());
   };
 
   return(
   <div>
     {status ? (
-      "You are now logged in. Enjoy!"
+      "Successfully Logged In"
     ) : (
       <div className="login-overlay">
         <div className="login-modal">

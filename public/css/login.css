@@ -123,6 +123,11 @@ form.sign-up-form {
   margin-bottom: 2rem;
 }
 
+.p-requirements {
+  color: #bbb;
+  font-size: .65rem;
+  margin-top: 5px;
+}
 .error-message {
   color: red;
   font-size: .65rem;

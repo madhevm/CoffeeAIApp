@@ -25,6 +25,10 @@ function CoffeeAI() {
     if (fetchedAccountStatus === 'Please Login') {
     }
   }, []);
+  
+  const handleHomeButtonClick = () => {
+    router.push('/').then(() => router.reload());
+  };
 
   return(
 <>
@@ -33,6 +37,7 @@ function CoffeeAI() {
   <meta charSet="UTF-8" />
   <title>Coffee AI</title>
   <link rel="stylesheet" href="/css/coffeeai.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link
     href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300,100&f[]=tanker@400&display=swap"
     rel="stylesheet"
@@ -42,8 +47,8 @@ function CoffeeAI() {
   </Head>
 
   <section className="side-bar">
-    <button className="button" id="newChatButtonElement">
-      New Chat
+    <button className="button" id="homeElement" onClick={handleHomeButtonClick}>
+      Back to Home
     </button>
     <p className="miniTitle" />
     <div className="history" />
@@ -84,9 +89,11 @@ function CoffeeAI() {
       </div>
     </form>
     <div id="loadingContainer" />
-    <nav>
-      <p>© 2024 CoffeeAI All Rights Reserved</p>
-    </nav>
+    <div class="account-status">
+      <Account>
+        <Status />
+      </Account>
+    </div>
   </section>
   <section className="main">
     <h1>CoffeeAI</h1>
@@ -115,11 +122,6 @@ function CoffeeAI() {
       mistakes. Consider checking important information and a variety of sources
       before brewing!
     </p>
-    <div class="account-status">
-      <Account>
-        <Status />
-      </Account>
-    </div>
   </section>
 
   <Script src="/js/app_page.js"></Script>

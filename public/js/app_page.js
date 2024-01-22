@@ -1,7 +1,6 @@
 const submitButton = document.querySelector('#submit')
 const outPutElement = document.querySelector('#output')
 const historyElement = document.querySelector('.history')
-const newChatButtonElement = document.querySelector('.button')
 
 async function getMessage() {
   console.log('clicked');
@@ -55,33 +54,36 @@ async function getMessage() {
   }
 }
 
+let loadingSpinner;
+
 function showLoadingMessage() {
-  // Display a loading message or spinner
-  const loadingMessage = document.createElement('p');
-  loadingMessage.textContent = 'Loading...';
-  loadingMessage.className = 'loading-message';
-  document.getElementById("loadingContainer").appendChild(loadingMessage);
+  loadingSpinner = document.createElement('div');
+  loadingSpinner.className = 'loading-spinner';
+  document.querySelector(".main").appendChild(loadingSpinner);
 }
 
 function hideLoadingMessage() {
-  const loadingMessage = document.querySelector('.loading-message');
-  if (loadingMessage) {
-    loadingMessage.remove();
+  // Use loadingSpinner directly instead of redeclaring it
+  if (loadingSpinner) {
+    loadingSpinner.remove();
   }
 }
 
 submitButton.addEventListener('click', getMessage)
 
 function clearInput() {
+  console.log('Clearing input fields...');
   document.getElementById("blend").value = '';
   document.getElementById("flavor").value = '';
   document.getElementById("roast_level").value = '';
 }
+const newChatButtonElement = document.querySelector('.button');
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log(newChatButtonElement);
   newChatButtonElement.addEventListener('click', clearInput);
 });
+
 const inputs = document.querySelectorAll(".input-field");
 
 inputs.forEach(inp => {

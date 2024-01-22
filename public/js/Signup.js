@@ -129,6 +129,11 @@ return (
               <label>Password</label>
               <p className="error-message">{passwordError}</p>
             </div>
+            <p class = "p-requirements">Password Requirements: 
+              <br />*Contains at least 1 number 
+              <br />*Contains at least 1 special character
+              <br />*Contains at least 1 uppercase letter
+              <br />*Contains at least 1 lowercase letter </p> <br />
             <p className="success-message">{registrationSuccessMessage}</p>
             <p className="error-message">{registrationErrorMessage}</p>
             <input type="submit" defaultValue="Sign Up" className="sign-btn" />

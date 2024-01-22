@@ -58,7 +58,7 @@ function Verify() {
         console.log(data);
         setVerificationStatus('Account verified successfully');
         setSuccessMessage('You have successfully verified your account!');
-        router.push('/coffeeai');
+        router.push('/login').then(() => router.reload());
       }
     });
   };
