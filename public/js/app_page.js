@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log(newChatButtonElement);
   newChatButtonElement.addEventListener('click', clearInput);
 });
-
 const inputs = document.querySelectorAll(".input-field");
 
 inputs.forEach(inp => {

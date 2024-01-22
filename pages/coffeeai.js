@@ -25,6 +25,7 @@ function CoffeeAI() {
     if (fetchedAccountStatus === 'Please Login') {
     }
   }, []);
+
   return(
 <>
 <Head>
@@ -113,13 +114,15 @@ function CoffeeAI() {
       Powered with ChatGPT by OpenAI. Chat GPT Mar 14 Version. CoffeeAI can make
       mistakes. Consider checking important information and a variety of sources
       before brewing!
+    </p>
+    <div class="account-status">
       <Account>
         <Status />
       </Account>
-    </p>
+    </div>
   </section>
 
-  <Script src="js/app_page.js"></Script>
+  <Script src="/js/app_page.js"></Script>
 </>
   )
 }

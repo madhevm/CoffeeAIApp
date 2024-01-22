@@ -13,6 +13,6 @@ const Status = () => {
     });
   }, []);
 
-  return <div>{status ? "You are logged in" : "Please login"}</div>
+  return <div>{status ? "You are now logged in enjoy!" : "Please login!"}</div>
 };
 export default Status;

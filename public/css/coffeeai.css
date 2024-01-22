@@ -30,18 +30,31 @@ h1 {
   height: 100vh;
   justify-content: space-between;
   float: left;
+  position: relative;
+  z-index: 2; 
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
   align-items: center;
   text-align: center;
-  justify-content: flex-end;
-  max-height: 100vh;
-  width: 100vh;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 40px;
+  overflow-x: hidden;
+  max-width: 800px; /* Set your desired maximum width */
+  margin: 0 auto; /* Center .main horizontally */
+  position: relative;
+  z-index: 1;
+  flex-grow: 1; /* Allow .main to grow and take remaining space */
+}
+
+.info { 
+    color: #bababa;
+    font-size: 11px;
+    bottom: 0;
+    position: absolute;
 }
 
 .bottom-section {
@@ -50,14 +63,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.info {
-  color: #bababa;
-  font-size: 11px;
-  padding: 10px;
-  position: sticky;
-  bottom: 0;
 }
 
 .input-container {
@@ -187,11 +192,6 @@ label {
   top: -2px;
 }
 
-.info {
-  position: sticky;
-  bottom: 0;
-}
-
 .sign-btn {
   width: 85%;
   height: 38px;
@@ -221,9 +221,18 @@ label {
   margin: 0.3rem;
 }
 
+.account-status {
+  color: #bbb;
+  font-size: 0.9rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .text {
   color: #bbb;
   font-size: 0.9rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .text a {
@@ -289,6 +298,12 @@ output-container {
   .sign-btn {
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    max-width: 100%;
   }
 }
 
