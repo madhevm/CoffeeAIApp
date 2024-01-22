@@ -57,6 +57,30 @@ h1 {
     position: absolute;
 }
 
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-modal {
+  background: #151111;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login-modal-button {
+  color: #fff;
+  font-size: 14px;
+}
+
 .bottom-section {
   width: 100%;
   display: flex;
