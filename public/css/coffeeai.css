@@ -336,17 +336,26 @@ output-container {
 
 @media all and (max-width: 800px) {
   .side-bar {
-    width: 100%;
-    max-width: none;
+    width: 100%; 
+    max-width: none; 
+    position: static; 
+    height: auto;
+  }
+
+  .main {
+    padding-left: 20px; 
   }
 
   .input-container {
-    max-width: 100%;
+    max-width: 100%; 
+    position: static; 
+    transform: none;
+    bottom: auto;
   }
 
   .sign-btn {
-    width: 100%;
-    margin-left: 0;
+    width: 100%; 
+    margin-left: 0; 
   }
   
   body .side-bar {  

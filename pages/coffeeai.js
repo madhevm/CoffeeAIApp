@@ -100,15 +100,15 @@ function CoffeeAI() {
     <p className="text">
       Prompt CoffeeAI by inputting your favourite{" "}
       <a href="https://www.ncausa.org/About-Coffee/Coffee-Around-the-World">
-        blend
+        <b>blend</b>
       </a>
       ,{" "}
       <a href="https://foamaroma.com/top-10-most-popular-coffee-flavors/">
-        flavor
+        <b>flavor</b>
       </a>{" "}
       and{" "}
       <a href="https://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide">
-        type of roast
+        <b>type of roast</b>
       </a>{" "}
       to find the best coffee recipe just for you!
     </p>
