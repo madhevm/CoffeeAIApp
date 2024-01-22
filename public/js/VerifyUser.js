@@ -10,9 +10,20 @@ function Verify() {
   const [OTP, setOTP] = useState('');
   const [verifyProcess, setVerifyProcess] = useState(false);
   const [verificationStatus, setVerificationStatus] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [otpError, setOtpError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
  
   const onSubmit = (e) => {
     e.preventDefault();
+
+// Validate email format
+      if (!validateEmail(emailInputSignin)) {
+        setEmailError("Invalid email format");
+        return;
+      } else {
+        setEmailError("");
+      }
 
     const attributeList = [];
     attributeList.push(
@@ -25,6 +36,14 @@ function Verify() {
  
   const verifyAccount = (e) => {
     e.preventDefault();
+
+        // Validate OTP (Verification Code)
+        if (!validateOTP(OTP)) {
+          setOtpError("Invalid OTP format");
+          return;
+        } else {
+          setOtpError("");
+        }
     const user = new CognitoUser({
       Username: emailInputSignin,
       Pool: UserPool,
@@ -33,15 +52,27 @@ function Verify() {
     user.confirmRegistration(OTP, true, (err, data) => {
       if (err) {
         console.log(err);
-        setVerificationStatus("Couldn't verify account. Please check the entered OTP.");
+        setVerificationStatus("Couldn't verify account. Please check the OTP.");
+        setSuccessMessage('');
       } else {
         console.log(data);
         setVerificationStatus('Account verified successfully');
-        router.push('/login').then(() => window.location.reload());
+        setSuccessMessage('You have successfully verified your account!');
+        router.push('/coffeeai');
       }
     });
   };
- 
+   // Email validation function
+   const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  // OTP (Verification Code) validation function
+  const validateOTP = (otp) => {
+    return otp.length >= 6;
+  };
+
   return (
     <form onSubmit={verifyAccount}
       autoComplete="off"
@@ -63,14 +94,13 @@ function Verify() {
           <input
             value={emailInputSignin}
             onChange={(e) => setEmail(e.target.value)}
-            type="text"
-            pattern=".*"
-            minLength={4}
+            type="email"
             className="input-field"
             autoComplete="off"
             required=""
           ></input>
           <label>eMail</label>
+          <p className="error-message">{emailError}</p>
         </div>
         <div className="input-wrap">
           <input
@@ -84,8 +114,10 @@ function Verify() {
             required=""
           ></input>
           <label>Verification Code</label>
+          <p className="error-message">{otpError}</p>
         </div>
-          {verificationStatus && <p className={verificationStatus.includes('successfully') ? 'success' : 'error'}>{verificationStatus}</p>}
+        {verificationStatus && <p className={`error-message ${verificationStatus.includes('Couldn\'t') ? 'error' : 'success'}`}>{verificationStatus}</p>}
+          {successMessage && <p className="success">{successMessage}</p>}
           <input type="submit" defaultValue="Verify" className="verify-btn" />
           <p class="text">
                 Didn't get a verification code? Check your spam mail or try again by <a href="/login.html">registering your account</a> with us.

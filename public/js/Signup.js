@@ -7,20 +7,79 @@ const Signup = () => {
   const router = useRouter();
   const [emailInputRegister, setEmail] = useState("");
   const [passwordInputRegister, setPassword] = useState("");
-
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [registrationSuccessMessage, setRegistrationSuccessMessage] = useState("");
+  const [registrationErrorMessage, setRegistrationErrorMessage] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
   
+  // Validate email format
+  if (!validateEmail(emailInputRegister)) {
+    setEmailError("Invalid email format");
+    return;
+  } else {
+    setEmailError("");
+  }
+
+  // Validate password
+  const passwordValidationResult = validatePassword(passwordInputRegister);
+  if (passwordValidationResult !== "valid") {
+    setPasswordError(passwordValidationResult);
+    return;
+  } else {
+    setPasswordError("");
+  }
+
     UserPool.signUp(emailInputRegister, passwordInputRegister, [], null, (err, data) => {
       if (err) {
         console.error(err);
+        setRegistrationErrorMessage("Registration failed. Please try again.");
+        setRegistrationSuccessMessage("");
       } else {
       console.log(data);
+      setRegistrationSuccessMessage("Registration successful! Check your email for verification.");
+        setRegistrationErrorMessage("");
       router.push('/verify');
       }
     });
   };
+  // Email validation function
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  // Password validation function
+  const validatePassword = (password) => {
+// Password must be at least 8 characters long
+if (password.length < 8) {
+  return "Password must be at least 8 characters long";
+}
+
+// Check for at least 1 number
+if (!/\d/.test(password)) {
+  return "Password must contain at least 1 number";
+}
+
+// Check for at least 1 special character
+if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+  return "Password requires at least 1 special character";
+}
+
+// Check for at least 1 uppercase letter
+if (!/[A-Z]/.test(password)) {
+  return "Password must contain at least 1 uppercase letter";
+}
+
+// Check for at least 1 lowercase letter
+if (!/[a-z]/.test(password)) {
+  return "Password must contain at least 1 lowercase letter";
+}
+// If all requirements are met, return "valid"
+return "valid";
+};
 
 return (
         <form onSubmit={onSubmit} 
@@ -53,6 +112,7 @@ return (
                 required=""
               ></input>
               <label>eMail</label>
+              <p className="error-message">{emailError}</p>
             </div>
             <div className="input-wrap">
               <input
@@ -67,7 +127,10 @@ return (
                 required=""
               ></input>
               <label>Password</label>
+              <p className="error-message">{passwordError}</p>
             </div>
+            <p className="success-message">{registrationSuccessMessage}</p>
+            <p className="error-message">{registrationErrorMessage}</p>
             <input type="submit" defaultValue="Sign Up" className="sign-btn" />
             <p className="text">
               By signing up, I agree to <a href="/">Brew the Best Coffee</a> and
