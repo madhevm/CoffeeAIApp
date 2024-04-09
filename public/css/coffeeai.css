@@ -144,6 +144,7 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
+  border: none;
   background-color: #fff;
 }
 
@@ -204,11 +205,11 @@ form {
   width: 20px;
   height: 20px;
   animation: spin 1s linear infinite;
-  position: absolute;
-  top: 70%;
+  position: center;
+  top: 50%;
   left: 50%;
-  margin-top: -10px;
-  margin-left: -10px; 
+  margin-top: 40px;
+  margin-left: 200px; 
 }
 
 @keyframes spin {
@@ -432,7 +433,7 @@ output-container {
     height: 20px;
     animation: spin 1s linear infinite;
     position: absolute;
-    top: 90%;
+    top: 95%;
     left: 50%;
     margin-top: -10px;
     margin-left: -10px; 
