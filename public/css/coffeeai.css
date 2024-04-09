@@ -30,7 +30,10 @@ h1 {
   height: 100vh;
   justify-content: space-between;
   float: left;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
   z-index: 2; 
 }
 
@@ -40,21 +43,19 @@ h1 {
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 100vh;
-  padding-left: 40px;
+  padding-left: 400px;
   overflow-x: hidden;
-  max-width: 800px; /* Set your desired maximum width */
+  overflow-y: auto;
+  max-width: 8000px; /* Set your desired maximum width */
   margin: 0 auto; /* Center .main horizontally */
   position: relative;
   z-index: 1;
   flex-grow: 1; /* Allow .main to grow and take remaining space */
+  margin-top: 60px;
 }
 
 .info { 
-    color: #bababa;
-    font-size: 11px;
-    bottom: 0;
-    position: absolute;
+    display: none;
 }
 
 .login-overlay {
@@ -238,17 +239,20 @@ label {
 
 .sign-btn {
   width: 85%;
-  height: 38px;
-  background-color: #fff;
-  color: #000000;
+  height: 29px;
   border: none;
   cursor: pointer;
   border-radius: 0.8rem;
-  font-size: 2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
   transition: 0.3s;
   margin-left: 20px;
   text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 9 25;
 }
 
 .sign-btn:hover {
@@ -336,10 +340,39 @@ output-container {
 
 @media all and (max-width: 800px) {
   .side-bar {
-    width: 100%; 
-    max-width: none; 
-    position: static; 
     height: auto;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column; /* Ensure children stack vertically */
+    align-items: flex-start; /* Align children to the start of the column */
+    position: relative;
+  }
+
+  .account-status,
+  .actual-form,
+  .input-wrap {
+    width: 100%; /* Ensure full width within the .side-bar */
+  }
+
+  .sign-btn {
+    padding: 1px; /* Adjust padding for smaller screens */
+    font-size: 1.0rem; /* Adjust font size for smaller screens */
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #fff; /* Set text color */
+    border: 1px solid #fff; /* Add white border */
+    border-radius: 0.4rem; /* Add border radius */
+    transform: translateX(0%);
+    cursor: pointer;
+    display: inline-block; /* Ensure the button only takes up necessary width */
+    text-align: center;
+    transition: color 0.3s, border-color 0.3s; /* Add transition */
+    background-color: transparent; /* Remove background color */
+  }
+  
+  .sign-btn:hover {
+    color: #6253e1; /* Change text color on hover */
+    border-color: #6253e1; /* Change border color on hover */
   }
 
   .main {
@@ -371,6 +404,41 @@ output-container {
   width: 100%;
   margin-left: 0;
   }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative; /* Change position to relative for larger screens */
+    z-index: 1; /* Ensure the sidebar appears below the main content */
+  }
+
+  .main {
+    margin-top: 0; /* Remove margin for larger screens */
+  }
+
+  .main h1 {
+    height: 90%;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #8371fd;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px; 
+  }
+
+
 }
 
 @media (max-width: 1200px) {

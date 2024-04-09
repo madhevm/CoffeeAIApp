@@ -85,7 +85,7 @@ function CoffeeAI() {
         <label>Level of Roast:</label>
       </div>
       <div id="submit" value="Search" className="sign-btn">
-        ✧˖°
+      ✧ Find My Coffee
       </div>
     </form>
     <div id="loadingContainer" />
