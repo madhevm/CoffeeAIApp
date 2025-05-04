@@ -10,6 +10,7 @@ if (typeof window === 'object') {
 
 function Home() {
   return(
+  // Start of Selection
 <>
     <Head>
 
@@ -209,7 +210,7 @@ function Home() {
         </div>
       </div>
       <div className="footer__rights">
-        <p className="footer__copy">© 2024 CoffeeAI. All rigths reserved.</p>
+        <p className="footer__copy">© {new Date().getFullYear()} CoffeeAI. All rights reserved.</p>
         <div className="footer__terms">
           <a href="#" className="footer__terms-link">
             Happy Brewing!
@@ -222,7 +223,6 @@ function Home() {
   <a href="#" className="scrollup" id="scroll-up">
     <i className="ri-arrow-up-line scrollup__icon" />
   </a>
-
 </>
 
   )
