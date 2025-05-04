@@ -213,7 +213,7 @@ function Home() {
         <p className="footer__copy">© {new Date().getFullYear()} CoffeeAI. All rights reserved.</p>
         <div className="footer__terms">
           <a href="#" className="footer__terms-link">
-            Happy Brewing!
+            Happy Brewing!!
           </a>
         </div>
       </div>
